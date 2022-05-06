@@ -1,0 +1,74 @@
+site_url: https://rafaeltf.com/
+logo_url: https://ntn-boilerplate.netlify.app/icon.png
+
+publish_mode: editorial_workflow
+backend:
+  name: git-gateway
+  branch: master
+  squash_merges: true
+
+# used together with `npx netlify-cms-proxy-server`. https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
+local_backend: true
+
+media_folder: static/img
+public_folder: /img
+
+# Docs: https://www.netlifycms.org/docs/configuration-options/#collections
+collections:
+  - label: 'Site settings'
+    name: 'site'
+    files:
+      - label: 'Info'
+        name: 'info'
+        file: 'content/site/info.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - { label: Site Name, name: sitename, widget: string, hint: 'This is used for the site title' }
+          - {
+              label: Site Description,
+              name: sitedescription,
+              widget: string,
+              hint: 'This is used as descriptive text for links that link to this site',
+            }
+          - {
+              label: Site Language,
+              name: sitelang,
+              widget: string,
+              pattern: ['^[a-z]{2}([-])?([A-Za-z]{2})?$', 'Must match "xx" or "xx-XX" syntax (ex. "en" or "sv-SE")'],
+            }
+          # - { label: Site Email, name: siteemail, widget: string, required: false }
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
+    create: true
+    format: 'frontmatter'
+    slug: '{{fields.createdAt}}-{{slug}}'
+    fields:
+      - { label: 'Created Date', name: 'createdAt', widget: 'datetime', date_format: 'YYYY-MM-DD', time_format: false }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Description', name: 'description', widget: 'string', required: false }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+  - name: 'experience'
+    label: 'Experience'
+    folder: 'content/experience'
+    create: true
+    format: 'frontmatter'
+    slug: '{{fields.createdAt}}-{{slug}}'
+    fields:
+      - { label: 'Created Date', name: 'createdAt', widget: 'datetime', date_format: 'YYYY-MM-DD', time_format: false }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Description', name: 'description', widget: 'string', required: false }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+  - name: 'speaking'
+    label: 'Speaking'
+    folder: 'content/speaking'
+    create: true
+    format: 'frontmatter'
+    slug: '{{fields.createdAt}}-{{slug}}'
+    fields:
+      - { label: 'Created Date', name: 'createdAt', widget: 'datetime', date_format: 'YYYY-MM-DD', time_format: false }
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Description', name: 'description', widget: 'string', required: false }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }

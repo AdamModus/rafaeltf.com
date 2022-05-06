@@ -1,0 +1,40 @@
+{
+  "name": "ntn-boilerplate",
+  "version": "2.1.0",
+  "description": "Nuxt-Tailwind-NetlifyCMS boilerplate",
+  "author": "Sven Parker <sven@svenparker.com> (https://svenparker.com)",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knogobert/ntn-boilerplate#readme"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@nuxt/content": "^1.15.1",
+    "nuxt": "^2.15.8"
+  },
+  "devDependencies": {
+    "@nuxtjs/color-mode": "^3.0.2",
+    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/svg": "^0.4.0",
+    "@nuxtjs/tailwindcss": "^5.0.2",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "netlify-cli": "^9.16.6",
+    "nuxt-purgecss": "^1.0.0",
+    "postcss": "^8.4.8",
+    "postcss-easing-gradients": "^3.0.1",
+    "postcss-preset-env": "^7.4.3",
+    "prettier": "^2.6.2",
+    "vue-content-placeholders": "^0.2.1"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
