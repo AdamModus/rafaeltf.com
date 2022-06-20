@@ -23,6 +23,7 @@ An opinionated starter template for a quick start with the following technologie
 - Nuxt-content (w/ exensible support for markdown and code-blocks)
 
 ##### Optional extra setup
+
 - Git LFS (store uploaded images outside the main repo)
 - Netlify LM (Netlify’s Git LFS support)
 
@@ -33,17 +34,19 @@ Use the deploy button to get your own copy of the repository.
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/knogobert/ntn-boilerplate&stack=cms)
 
 This will setup everything needed for running the CMS:
- - A new repository in your GitHub account with the code
- - Full Continuous Deployment to Netlify's global CDN network
- - Control users and access with Netlify Identity
- - Manage content with Netlify CMS and Nuxt-content
+
+- A new repository in your GitHub account with the code
+- Full Continuous Deployment to Netlify's global CDN network
+- Control users and access with Netlify Identity
+- Manage content with Netlify CMS and Nuxt-content
 
 Once the initial build finishes, you can invite yourself as a user. Go to the Identity tab in your new site, click "Invite" and send yourself an invite. Start with by registering a regular email-account (not OAuth yet!) with a [generated password](https://passwordwolf.com/).
 
 You should be up and running, ready for personalization!
 
-### These extra steps are only necessary if you want to upload large media in Netlify CMS:
-This way it doesn't clutter up your repo with large unmanageable files. But *do know* that it is easier to add later than undoing it later.
+### These extra steps are only necessary if you want to upload large media in Netlify CMS
+
+This way it doesn't clutter up your repo with large unmanageable files. But _do know_ that it is easier to add later than undoing it later.
 
 1. **[Install git-lfs](https://git-lfs.github.com/)** on your computer and remove the `#` in the project's `.gitattributes`
 
@@ -55,30 +58,30 @@ This way it doesn't clutter up your repo with large unmanageable files. But *do 
 
 1. 📦 Install dependencies.
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 2. 🏗 Run the project for local dev. This will start a hot-reloading server at `localhost:3000`.
 
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
 3. 🌌 Build the app for server-side rendered deployment. See more about **Universal SSR** in the [Nuxt.js docs](https://nuxtjs.org/guide#server-rendered-universal-ssr-).
 
-```bash
-npm run build
+   ```bash
+   npm run build
 
-# And to serve that deployment...
-npm run start
-```
+   # And to serve that deployment...
+   npm run start
+   ```
 
 4. ⚡️ Generate a fully pre-rendered static site. See more [in the docs](https://nuxtjs.org/guide#static-generated-pre-rendering-).
 
-```bash
-npm run generate
-```
+   ```bash
+   npm run generate
+   ```
 
 ### Personalize setup
 
